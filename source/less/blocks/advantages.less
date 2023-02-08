@@ -1,18 +1,23 @@
 .advantages {
+  padding: 20px 20px 30px;
+ 
   &__title {
     .font(36px, 40px);
-    margin: 0;
-    color: @basic-black;
+    margin: 0 0 40px;
   }
   &__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  } 
+  &__item {
+    & + & {
+    margin-top: 24px;
+    }
   }
   &__text {
-    font-family: "Arial";
-    .font(14px, 18px);
+    .font(14px, 18px, @dark-grey, "Arial");
     margin: 0;
-    color: @dark-grey;
   }
+  
 }

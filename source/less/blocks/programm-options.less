@@ -1,4 +1,6 @@
 .programm-options {
+  padding: 0 20px;
+  margin-bottom: 20px;
   &__list {
     list-style-type: none;
     margin: 0;
@@ -6,23 +8,20 @@
   }
   &__item {
     background-color: @basic-grey-2;
+    padding: 30px 20px 20px;
   }
   &__title {
     .font(24px, 37px);
     text-transform: uppercase;
-    margin: 0;
-    color: @basic-black;
+    margin: 0 0 30px;
   }
   &__text {
-    font-family: "Arial"; 
-    .font(14px, 18px);
-    color: @dark-grey;
-    margin: 0;
+    .font(14px, 18px, @dark-grey, "Arial");
+    margin: 0 0 38px;
   }
   &__link {
     .font(16px, 16px);
     text-transform: uppercase;
-    color: @basic-black;
     text-decoration: none;
   }
 }

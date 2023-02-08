@@ -1,15 +1,28 @@
 .example {
   background-color: @basic-grey-2;
+  padding: 25px 20px 40px;
   &__title {
     .font(36px, 40px);
-    margin: 0;
-    color: @basic-black;
+    margin: 0 0 40px;
   }
   &__text {
-    font-family: "Arial";
-    .font(14px, 18px);
+    .font(14px, 18px, @dark-grey, "Arial");
+    margin: 0 0 20px;
+  }
+  &__list {
+    margin: 0 0 20px;
+  }
+  &__legend {
+    .font(12px, 12px, @dark-grey, "Arial");
+  }
+  &__description {
+    .font(24px, 24px);
     margin: 0;
-    color: @dark-grey;
+  }
+  &__spending {
+    .font(14px, 20px);
+    text-transform: uppercase;
+    margin: 0 0 40px;
   }
   &__image {
     display: block;

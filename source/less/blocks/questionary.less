@@ -1,33 +1,30 @@
 .questionary {
+  padding: 20px 20px 32px;
   &__field {
-    margin: 0;
-    padding: 0;
+    margin: 0 0 20px;
+    padding: 20px 0 0;
   }
   &__title {
     .font(24px, 26px);
-    color: @basic-black;
   }
   &__text {
-    .font(16px, 18px);
+    .font(16px, 18px, @dark-grey);
     text-transform: uppercase;
-    color: @dark-grey;
   }
   &__input {
-    .font(16px, 18px);
+    .font(16px, 18px, @dark-grey);
     text-transform: uppercase;
-    color: @dark-grey;
   }
   &__check {
-    color: @basic-black;
+    .font(16px, 18px);
   }
   &__button {
-    .font(16px, 20px);
+    .font(16px, 20px, @basic-white);
     background-color: @basic-green;
-    color: @basic-white;
+    margin-bottom: 20px;
   }
   &__footnote {
     .font(14px, 16px);
     margin: 0;
-    color: @basic-black;
   }
 }
