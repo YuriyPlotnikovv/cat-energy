@@ -1,15 +1,43 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
   &__logo {
     display: block;
     margin-bottom: 52px;
+    align-self: center;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+    }
   }
   &__social {
     margin: 0 0 43px;
     padding: 0;
     list-style-type: none;
+    display: flex;
+    gap: 33px;
+    align-self: center;
+
+    @media (min-width: @tablet-width) {
+      justify-content: center;
+      margin: 0;
+    }
   }
   &__academy {
     .font(16px, 18.4px, @dark-grey, "Arial");
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (min-width: @tablet-width) {
+      justify-content: flex-end;
+      gap: 22px;
+    }
   }
 }

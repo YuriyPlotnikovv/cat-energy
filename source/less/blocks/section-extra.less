@@ -1,5 +1,6 @@
 .section-extra {
   padding: 25px 20px 20px;
+
   &__title {
     .font(24px, 24px);
     margin: 0;
@@ -8,8 +9,16 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
   }
   &__item {
     padding: 11px 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media(min-width: @tablet-width) {
+      grid-template-columns: 2fr 1fr;
+    }
   }
 }

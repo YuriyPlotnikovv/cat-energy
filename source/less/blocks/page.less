@@ -2,16 +2,29 @@
   &__body {
     background-color: @basic-white;
     margin: 0;
+    width: 100%;
   }
   &__header {
-    .font(20px, 20px, "Oswald", 500);
-    padding: 11px 20px 17px;
-  }
-  &__main {
+    .font(20px, 20px, @basic-black, "Oswald", 500);
+    padding: 0 20px;
+
+    @media(min-width: @tablet-width) {
+      padding: 0 30px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
   &__footer {
     background-color: @basic-grey;
     .font(16px, 18.4px);
     padding: 39px 20px 22px;
+
+    @media (min-width: @tablet-width) {
+      padding: 58px 30px 55px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 58px 110px 55px;
+    }
   }
 }

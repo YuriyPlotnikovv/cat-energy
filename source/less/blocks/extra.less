@@ -1,14 +1,30 @@
 .extra {
   &__title {
     .font(16px, 16px, @dark-grey-2);
+    text-transform: uppercase;
     margin: 0;
+
+    @media(min-width: @tablet-width) {
+      margin-right: auto;
+    }
   }
   &__data {
     .font(14px, 14px, @dark-grey, "Arial");
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media(min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr max-content;
+    }
   }
   &__button {
     .font(16px, 20px, @basic-white);
     background-color: @basic-green;
+
+    @media(min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
   }
 }

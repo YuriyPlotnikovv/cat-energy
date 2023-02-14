@@ -7,9 +7,18 @@
   background-image: url(../../img/catalog-gift-background.jpg);
   background-repeat: no-repeat;
   background-size: 280px 290px;
+
+  @media(min-width: @tablet-width) {
+    background-size: cover;
+    background-position: center;
+  }
   }
   &__text {
     margin: 0;
     padding: 187px 60px 43px;
+
+    @media(min-width: @tablet-width) {
+      padding: 71px 124px 69px 422px;
+    }
   }
 }
