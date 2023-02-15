@@ -38,39 +38,41 @@
     <h1 class="page-main__title">Подбор программы</h1>
     <p class="page-main__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
     <form class="page-main__section questionary">
-      <fieldset class="questionary__field">
-        <legend class="visually-hidden">Данные кота</legend>
-        <label class="questionary__label">
-          <span class="questionary__text">Имя:*</span>
-          <input class="questionary__input" name="cat-name" placeholder="Барсик" type="text" required>
-        </label>
-        <label class="questionary__label">
-          <span class="questionary__text">Вес (кг):*</span>
-          <input class="questionary__input" name="cat-weight" placeholder="7" type="text" required>
-        </label>
-        <label class="questionary__label">
-          <span class="questionary__text">Возраст (лет):</span>
-          <input class="questionary__input" name="cat-age" placeholder="7" type="text">
-        </label>
-      </fieldset>
+      <div class="questionary__main-wrapper">
+        <fieldset class="questionary__field">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="questionary__label">
+            <span class="questionary__text">Имя:*</span>
+            <input class="questionary__input" name="cat-name" placeholder="Барсик" type="text" required>
+          </label>
+          <label class="questionary__label">
+            <span class="questionary__text">Вес (кг):*</span>
+            <input class="questionary__input" name="cat-weight" placeholder="7" type="text" required>
+          </label>
+          <label class="questionary__label">
+            <span class="questionary__text">Возраст (лет):</span>
+            <input class="questionary__input" name="cat-age" placeholder="7" type="text">
+          </label>
+        </fieldset>
 
-      <fieldset class="questionary__field">
-        <legend class="visually-hidden">Выбор программы</legend>
-        <label class="questionary__label">
-          <input class="questionary__input" name="target" type="radio" checked>
-          <span class="questionary__text">Похудение</span>
-        </label>
-        <label class="questionary__label">
-          <input class="questionary__input" name="target" type="radio">
-          <span class="questionary__text">Набор массы</span>
-        </label>
-        <label class="questionary__label">
-          <input class="questionary__input" name="target" type="radio">
-          <span class="questionary__text">Не знаю (Нужен ваш совет)</span>
-        </label>
-      </fieldset>
+        <fieldset class="questionary__field">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <label class="questionary__label">
+            <input class="questionary__input" name="target" type="radio" checked>
+            <span class="questionary__text">Похудение</span>
+          </label>
+          <label class="questionary__label">
+            <input class="questionary__input" name="target" type="radio">
+            <span class="questionary__text">Набор массы</span>
+          </label>
+          <label class="questionary__label">
+            <input class="questionary__input" name="target" type="radio">
+            <span class="questionary__text">Не знаю (Нужен ваш совет)</span>
+          </label>
+        </fieldset>
+      </div>
 
-      <fieldset class="questionary__field">
+      <fieldset class="questionary__field questionary__contacts-wrapper">
         <legend class="questionary__title">Контактные данные (владельца кота)</legend>
         <label class="questionary__label">
           <span class="questionary__text">E-mail:*</span>
@@ -88,7 +90,7 @@
           placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
 
-      <fieldset class="questionary__field">
+      <fieldset class="questionary__field questionary__additional-wrapper">
         <legend class="questionary__title">Дополнительно</legend>
         <label class="questionary__label">
           <input class="questionary__input" name="additional" type="checkbox" checked>
@@ -108,8 +110,10 @@
         </label>
       </fieldset>
 
-      <button class="questionary__button button" type="button">Оставить заявку</button>
-      <p class="questionary__footnote">* — Обязательные поля</p>
+      <div class="questionary__button-wrapper">
+        <button class="questionary__button button" type="button">Оставить заявку</button>
+        <p class="questionary__footnote">* — Обязательные поля</p>
+      </div>
     </form>
 
     <section class="page-main__section contacts">

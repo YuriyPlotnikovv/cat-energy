@@ -1,5 +1,12 @@
 .questionary {
   padding: 20px 20px 32px;
+
+  @media(min-width: @tablet-width) {
+    padding: 20px 70px 32px;
+  }
+  @media(min-width: @desktop-width) {
+    padding: 20px 110px 32px;
+  }  
   &__field {
     margin: 0 0 20px;
     padding: 20px 0 0;
@@ -32,5 +39,34 @@
   &__footnote {
     .font(14px, 16px);
     margin: 0;
+  }
+  &__main-wrapper {
+    @media(min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__contacts-wrapper {
+    @media(min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__additional-wrapper {
+    @media(min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: @tablet-width) {
+      flex-direction: row;
+    }
   }
 }

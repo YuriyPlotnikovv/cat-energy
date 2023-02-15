@@ -6,15 +6,25 @@
     .font(36px, 36px);
     margin: 0;
     padding: 0 20px;
+    
+    @media(min-width: @tablet-width) {
+      padding: 0 70px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
   &__text {
     .font(14px, 18px);
     text-transform: uppercase;
     margin: 0;
     padding: 0 20px;
-  }
-  &__offer {
-    padding: 0 20px;
-    box-sizing: content-box;
+
+    @media(min-width: @tablet-width) {
+      padding: 0 70px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 0 110px;
+    }
   }
 }

@@ -1,17 +1,17 @@
 .offer {
   .font(16px, 20px, @basic-white, "Arial");
   margin: 0;
-  padding: 0 20px;
+
   &__wrapper {
   background-color: @basic-green;
   background-image: url(../../img/catalog-gift-background.jpg);
   background-repeat: no-repeat;
   background-size: 280px 290px;
 
-  @media(min-width: @tablet-width) {
-    background-size: cover;
-    background-position: center;
-  }
+    @media(min-width: @tablet-width) {
+      background-size: cover;
+      background-position: center;
+    }
   }
   &__text {
     margin: 0;
@@ -19,6 +19,9 @@
 
     @media(min-width: @tablet-width) {
       padding: 71px 124px 69px 422px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 184px 40px 40px;
     }
   }
 }

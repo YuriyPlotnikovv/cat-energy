@@ -1,9 +1,22 @@
 .section-extra {
   padding: 25px 20px 20px;
 
+  @media(min-width: @tablet-width) {
+    padding: 25px 30px;
+  }
+  @media(min-width: @desktop-width) {
+    padding: 25px 110px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 80px;
+  }
   &__title {
     .font(24px, 24px);
     margin: 0;
+
+    @media(min-width: @desktop-width) {
+      grid-column: 1 / -1;
+    }
   }
   &__list {
     margin: 0;
@@ -11,6 +24,11 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    margin-bottom: 35px;
+
+    @media(min-width: @tablet-width) {
+      margin-bottom: 69px;
+    }
   }
   &__item {
     padding: 11px 0 20px;
@@ -19,6 +37,10 @@
 
     @media(min-width: @tablet-width) {
       grid-template-columns: 2fr 1fr;
+    }
+    @media(min-width: @desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 38px;
     }
   }
 }

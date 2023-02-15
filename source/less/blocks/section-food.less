@@ -1,5 +1,12 @@
 .section-food {
   padding: 0 20px;
+
+  @media(min-width: @tablet-width) {
+      padding: 0 30px;
+    }
+  @media(min-width: @desktop-width) {
+      padding: 0 110px;
+    }  
   &__list {
     list-style-type: none;
     margin: 0;
@@ -10,6 +17,10 @@
       flex-wrap: wrap;
       gap: 60px;
     }
+    @media(min-width: @desktop-width) {
+      gap: 80px;
+    }
+    
   }
   &__item {
     padding: 20px 0 25px;
@@ -22,6 +33,9 @@
       flex-direction: column;
       width: 324px;
     }
+    @media(min-width: @desktop-width) {
+      width: 245px;
+    }
   }
   &__show-more {
     padding: 78px 0 25px;
@@ -31,6 +45,9 @@
 
     @media(min-width: @tablet-width) {
       width: 324px;
+    }
+    @media(min-width: @desktop-width) {
+      width: 245px;
     }
   }
 }
