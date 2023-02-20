@@ -1,12 +1,11 @@
 .programm-options {
   padding: 0 20px;
-  margin-bottom: 20px;
 
   @media(min-width: @tablet-width) {
     padding: 0 30px;
   }
   @media(min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 80px 110px 0;
   }
   &__list {
     list-style-type: none;
@@ -16,26 +15,61 @@
     flex-direction: column;
     gap: 20px;
 
+    @media(min-width: @tablet-width) {
+      gap: 30px;
+    }
     @media(min-width: @desktop-width) {
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
     }
   }
   &__item {
     background-color: @basic-grey-2;
     padding: 30px 20px 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 77px 316px 57px 52px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 77px 55px 60px 52px;
+    }
   }
   &__title {
     .font(24px, 37px);
     text-transform: uppercase;
     margin: 0 0 30px;
+    padding-left: 70px;
+
+    @media (min-width: @tablet-width) {
+      .font(36px, 36px);
+      margin: 0 0 23px;
+      padding: 0;
+    }
+    @media(min-width: @desktop-width) {
+      padding-left: 163px;
+      margin: 0 0 73px;
+    }
   }
   &__text {
     .font(14px, 18px, @dark-grey, "Arial");
-    margin: 0 0 38px;
+    margin: 0 0 40px;
+
+    @media (min-width: @tablet-width) {
+      .font(16px, 24px, @dark-grey, "Arial");
+      margin: 0 0 52px;
+    }
+    @media(min-width: @desktop-width) {
+      margin: 0 0 25px;
+    }
   }
   &__link {
     .font(16px, 16px);
     text-transform: uppercase;
     text-decoration: none;
+
+    @media(min-width: @tablet-width) {
+      .font(20px, 30px);
+    }
   }
 }

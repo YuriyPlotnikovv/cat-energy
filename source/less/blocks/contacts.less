@@ -12,14 +12,16 @@
     justify-content: space-between;
 
     @media(min-width: @tablet-width) {
-      padding: 26px 70px;
+      padding: 59px 70px 63px;
     }
     @media(min-width: @desktop-width) {
       background-color: @basic-white;
-      max-width: 565px;
       position: absolute;
       top: 95px;
       left: 110px;
+      padding: 60px 80px;
+      justify-content: start;
+      gap: 45px;
     }
   }
   &__title {
@@ -27,11 +29,24 @@
     text-transform: uppercase;
     margin: 0;
     width: 140px;
+
+    @media(min-width: @tablet-width) {
+      .font(20px, 26px, @basic-black-2);
+      width: 200px;
+    }
   }
   &__adress {
     .font(14px, 20px, @dark-grey, "Arial");
-    margin-bottom: 26px;
     width: 140px;
+
+    @media(min-width: @tablet-width) {
+      .font(16px, 20px, @dark-grey, "Arial");
+      width: 160px;
+      text-align: end;
+    }
+    @media(min-width: @desktop-width) {
+      text-align: start;
+    }
   }
   &__map {
     height: 362px;

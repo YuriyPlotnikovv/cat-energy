@@ -5,43 +5,82 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    height: 302px;
-    padding: 27px 20px 0;
+    padding: 27px 20px 135px;
 
     @media (min-width: @tablet-width) {
       background: none;
-      padding: 62px 237px 0 117px;
+      padding: 52px 237px 0 117px;
     }
     @media(min-width: @desktop-width) {
-      padding: 110px 836px 0 190px;
+      padding: 110px 836px 260px 190px;
+      background-image: url(../../img/index-background-image-desktop.jpg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: contain;
     }
   }
   &__title {
     .font(36px, 36px, @basic-white);
+    text-align: center;
     margin: 0 0 25px;
 
     @media (min-width: @tablet-width) {
       .font(60px, 60px, @basic-black);
+      margin: 0 0 41px;
       width: 414px;
+      text-align: start;
     }
   }
   &__text {
     .font(14px, 14px, @basic-white);
     text-transform: uppercase;
+    text-align: center;
     margin: 0 0 29px;
 
     @media (min-width: @tablet-width) {
       .font(20px, 20px, @basic-black);
+      text-align: start;
     }
   }
   &__image {
     display: block;
-    margin: 0 auto;
+    width: 280px;
+    height: 270px;
+    margin: -135px auto 3px;
+
+    @media (min-width: @tablet-width) {
+      width: auto;
+      height: 609px;
+      margin: -7px 0 0 109px;
+    }
+    @media(min-width: @desktop-width) {
+      position: absolute;
+      top: 40px;
+      left: 485px;
+      width: auto;
+      height: 495px;
+    }
   }
   &__button {
     .font(14px, 18px, @basic-white);
     background-color: @basic-green;
     text-decoration: none;
+    display: block;
     margin: 0 20px;
+    padding: 11px 44px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+      .font(20px, 20px);
+      position: absolute;
+      top: 282px;
+      left: 120px;
+      padding: 17px 26px;
+      margin: 0;
+    }
+    @media(min-width: @desktop-width) {
+      top: 340px;
+      left: 190px;
+    }
   }
 }

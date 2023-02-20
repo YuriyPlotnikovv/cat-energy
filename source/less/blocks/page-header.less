@@ -5,13 +5,7 @@
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
-      gap: 95px;
     }
-  }
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: 66px;
   }
   &__menu {
     margin: 0;
@@ -22,21 +16,37 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 66px;
+    top: 65px;
 
     @media (min-width: @tablet-width) {
       position: initial;
       flex-direction: row;
-      justify-content: end;
-      gap: 33px;
+      gap: 36px;
     }
   }
   &__logo {
     text-decoration: none;
     display: flex;
+    gap: 57px;
     align-items: center;
+
+    @media (min-width: @tablet-width) {
+      gap: 12px;
+    }
   }
   &__toggle {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    z-index: 2;
+    width: 24px;
+    height: 16px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    background-color: @basic-white;
+    outline: 1px solid red;
+
     @media (min-width: @tablet-width) {
       display: none;
     }

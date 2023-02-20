@@ -10,21 +10,19 @@
 
 <body class="page__body">
   <header class="page__header page-header">
+    <a class=" page-header__logo logo" href="./index.html" title="На главную">
+      <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта">
+      <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="CAT ENERGY">
+    </a>
     <nav class="page-header__nav">
-      <div class="page-header__wrapper">
-        <a class=" page-header__logo logo" href="./index.html" title="На главную">
-          <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип сайта">
-          <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="CAT ENERGY">
-        </a>
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-      <ul class="page-header__menu site-menu">
-        <li class="site-menu__item site-menu__item--current">
+      <button class="page-header__toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <ul class="page-header__menu site-menu site-menu--closed">
+        <li class="site-menu__item">
           <a class="site-menu__link" href="./index.html">Главная</a>
         </li>
-        <li class="site-menu__item">
+        <li class="site-menu__item site-menu__item--current">
           <a class="site-menu__link" href="#">Каталог продукции</a>
         </li>
         <li class="site-menu__item">
