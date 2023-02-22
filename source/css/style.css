@@ -33,7 +33,14 @@
   text-transform: uppercase;
 }
 .range__item {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
   padding: 0;
+  border: none;
+  text-transform: uppercase;
 }
 .page__body {
   background-color: #ffffff;
@@ -93,6 +100,7 @@
   width: 100%;
   left: 0;
   top: 65px;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .page-header__menu {
@@ -123,7 +131,15 @@
   border: none;
   cursor: pointer;
   background-color: #ffffff;
-  outline: 1px solid red;
+  padding: 0;
+}
+.page-header__toggle::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 -8px 0 0 #000000, 0 8px 0 0 #000000;
 }
 @media (min-width: 768px) {
   .page-header__toggle {
@@ -391,6 +407,7 @@
 .programm-options__item {
   background-color: #d9d9d9;
   padding: 30px 20px 20px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .programm-options__item {
@@ -401,6 +418,30 @@
   .programm-options__item {
     padding: 77px 55px 60px 52px;
   }
+}
+.programm-options__item--slim::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  width: 50px;
+  height: 53px;
+  background-image: url(../../img/icon-cat-skinny.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.programm-options__item--pro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 13px;
+  width: 67px;
+  height: 50px;
+  background-image: url(../../img/icon-cat-gain.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .programm-options__title {
   font-family: "Oswald";
@@ -470,6 +511,18 @@
     color: #000000;
   }
 }
+.programm-options__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 121px;
+  width: 24px;
+  height: 12px;
+  background-image: url(../../img/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .advantages {
   padding: 20px 20px 50px;
   display: flex;
@@ -527,6 +580,7 @@
 .advantages__item {
   padding-left: 80px;
   height: 60px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .advantages__item {
@@ -537,6 +591,54 @@
   .advantages__item {
     padding: 145px 20px 57px 0;
   }
+}
+.advantages__item--leaf::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../img/icon-leaf.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.advantages__item--water::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../img/icon-water.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.advantages__item--food::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../img/icon-food.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.advantages__item--time::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../img/icon-time.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .advantages__text {
   font-family: "Arial";
@@ -556,7 +658,7 @@
   }
 }
 .example {
-  background-color: #d9d9d9;
+  background-color: #eaeaea;
   padding: 25px 20px 40px;
   display: flex;
   flex-direction: column;
@@ -654,7 +756,10 @@
   line-height: 12px;
   color: #444444;
   order: 2;
-  padding: 0 25px;
+  margin-left: 22px;
+  width: 80px;
+  margin-top: -10px;
+  background-color: #eaeaea;
 }
 @media (min-width: 768px) {
   .example__legend {
@@ -679,8 +784,10 @@
   line-height: 24px;
   color: #000000;
   margin: 0;
-  padding: 5px 10px;
+  padding: 15px 10px;
   text-transform: uppercase;
+  border-radius: 5px;
+  outline: 1px solid grey;
 }
 @media (min-width: 768px) {
   .example__description {
@@ -761,11 +868,8 @@
   }
 }
 .example__range {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
+  display: flex;
+  justify-content: space-evenly;
 }
 @media (min-width: 768px) {
   .example__range {

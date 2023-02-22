@@ -17,6 +17,7 @@
     width: 100%;
     left: 0;
     top: 65px;
+    z-index: 2;
 
     @media (min-width: @tablet-width) {
       position: initial;
@@ -45,8 +46,18 @@
     border: none;
     cursor: pointer;
     background-color: @basic-white;
-    outline: 1px solid red;
+    padding: 0;
 
+    &::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: @basic-black;
+      box-shadow: 
+      0 -8px 0 0 @basic-black,
+      0 8px 0 0 @basic-black;
+    }
     @media (min-width: @tablet-width) {
       display: none;
     }

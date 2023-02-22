@@ -27,12 +27,41 @@
   &__item {
     background-color: @basic-grey-2;
     padding: 30px 20px 20px;
+    position: relative;
 
     @media (min-width: @tablet-width) {
       padding: 77px 316px 57px 52px;
     }
     @media(min-width: @desktop-width) {
       padding: 77px 55px 60px 52px;
+    }
+    &--slim {
+        &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 21px;
+        left: 22px;
+        width: 50px;
+        height: 53px;
+        background-image: url(../../img/icon-cat-skinny.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &--pro {
+        &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 13px;
+        width: 67px;
+        height: 50px;
+        background-image: url(../../img/icon-cat-gain.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
   &__title {
@@ -70,6 +99,18 @@
 
     @media(min-width: @tablet-width) {
       .font(20px, 30px);
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 24px;
+      left: 121px;
+      width: 24px;
+      height: 12px;
+      background-image: url(../../img/icon-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
