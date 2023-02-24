@@ -25,7 +25,7 @@
     }
   }
   &__item {
-    background-color: @basic-grey-2;
+    background-color: @basic-grey;
     padding: 30px 20px 20px;
     position: relative;
 
@@ -47,10 +47,23 @@
         background-image: url(../../img/icon-cat-skinny.svg);
         background-size: contain;
         background-repeat: no-repeat;
+
+        @media (min-width: @tablet-width) {
+          top: 81px;
+          left: 446px;
+          width: 200px;
+          height: 211px;
+        }
+        @media (min-width: @desktop-width) {
+          top: 41px;
+          left: 52px;
+          width: 100px;
+          height: 106px;
+        }
       }
     }
     &--pro {
-        &::before {
+      &::before {
         content: "";
         display: block;
         position: absolute;
@@ -61,6 +74,19 @@
         background-image: url(../../img/icon-cat-gain.svg);
         background-size: contain;
         background-repeat: no-repeat;
+        
+        @media (min-width: @tablet-width) {
+          top: 91px;
+          left: 412px;
+          width: 268px;
+          height: 200px;
+        }
+        @media (min-width: @desktop-width) {
+          top: 47px;
+          left: 33px;
+          width: 134px;
+          height: 100px;
+        }
       }
     }
   }
@@ -83,7 +109,19 @@
   &__text {
     .font(14px, 18px, @dark-grey, "Arial");
     margin: 0 0 40px;
-
+    position: relative;
+    
+    @media (max-width: @mobile-width-only) {
+      &::after {
+        content: "";
+        width: 240px;
+        height: 1px;
+        background-color: @basic-grey-2;
+        position: absolute;
+        left: 0;
+        bottom: -23px;
+      }
+    }
     @media (min-width: @tablet-width) {
       .font(16px, 24px, @dark-grey, "Arial");
       margin: 0 0 52px;
@@ -91,6 +129,7 @@
     @media(min-width: @desktop-width) {
       margin: 0 0 25px;
     }
+
   }
   &__link {
     .font(16px, 16px);
@@ -111,6 +150,12 @@
       background-image: url(../../img/icon-arrow.svg);
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (min-width: @tablet-width) {
+        bottom: 66px;
+        left: 181px;
+        width: 32px;
+      }
     }
   }
 }

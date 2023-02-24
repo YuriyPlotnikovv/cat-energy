@@ -4,5 +4,54 @@
     padding: 0;
     border: none;
     text-transform: uppercase;
+    background-color: inherit;
+    margin: 0 17px;
+
+    @media (min-width: @tablet-width) {
+      .font(20px, 30px);
+    }
+  }
+  &__toggler {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 86px;
+    height: 14px;
+    border-radius: 6px;
+    border: 1px solid @special-grey-4;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      display: block;
+      align-self: center;
+      width: 36px;
+      height: 6px;
+      margin: 0 6px;
+      border-radius: 6px;
+      background-color: @basic-green;
+    }
+    .range--before & {
+      justify-content: flex-start;
+    }
+    .range--after & {
+      justify-content: flex-end;
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+  &__slider {
+    width: 426px;
+    display: none;
+    
+    @media (min-width: @tablet-width) {
+      display: initial;
+      padding: 35px 0;
+    }
+    @media (min-width: @desktop-width) {
+      padding: 25px 0;
+    }
   }
 }

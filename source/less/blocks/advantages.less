@@ -30,6 +30,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 55px;
+      counter-reset: advantages;
     }
     @media(min-width: @desktop-width) {
       grid-template-columns: repeat(4, 1fr);
@@ -40,67 +41,62 @@
     padding-left: 80px;
     height: 60px;
     position: relative;
-
+    
     @media (min-width: @tablet-width) {
       padding: 145px 80px 57px 0;
+      counter-increment: advantages;
     }
     @media(min-width: @desktop-width) {
       padding: 145px 20px 57px 0;
     }
-    &--leaf {
-      &::before {
-        content: "";
+    &::before {
+      content: "";
         display: block;
         position: absolute;
         top: 0;
         left: 0;
         width: 60px;
         height: 60px;
-        background-image: url(../../img/icon-leaf.svg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+
+      @media (min-width: @tablet-width) {
+        top: 30px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 115px;
+      z-index: -1;
+      text-align: justify;
+      .font(280px, 280px, @basic-grey);
+      
+      @media (min-width: @tablet-width) {
+        content: counter(advantages);        
+      }
+    }
+    &--leaf {
+      &::before {
+        background-image: url(../../img/icon-leaf.svg);
       }
     }
     &--water {
       &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 60px;
         background-image: url(../../img/icon-water.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
       }
     }
     &--food {
       &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 60px;
         background-image: url(../../img/icon-food.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
       }
     }
     &--time {
       &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 60px;
         background-image: url(../../img/icon-time.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
       }
     }
   } 

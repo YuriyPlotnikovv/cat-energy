@@ -19,9 +19,9 @@
       position: absolute;
       top: 95px;
       left: 110px;
-      padding: 60px 80px;
+      padding: 60px 78px;
       justify-content: start;
-      gap: 45px;
+      gap: 50px;
     }
   }
   &__title {
@@ -38,6 +38,7 @@
   &__adress {
     .font(14px, 20px, @dark-grey, "Arial");
     width: 140px;
+    font-style: normal;
 
     @media(min-width: @tablet-width) {
       .font(16px, 20px, @dark-grey, "Arial");
@@ -46,6 +47,7 @@
     }
     @media(min-width: @desktop-width) {
       text-align: start;
+      margin-top: -5px;
     }
   }
   &__map {
