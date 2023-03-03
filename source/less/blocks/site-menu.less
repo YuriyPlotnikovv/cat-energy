@@ -23,6 +23,15 @@
         }
       }
     }
+    @media(min-width: @desktop-width) {
+      .site-menu--main & {
+        &--current {
+          &::after {
+            background-color: @basic-white;
+          }
+        }
+      }
+    }
   }
 
   &__link {
@@ -30,20 +39,22 @@
     text-transform: uppercase;
     text-decoration: none;
 
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
     @media(min-width: @tablet-width) {
       .font(18px, 24px);
     }
     @media (min-width: @desktop-width) {
-      .font(20px, 30px);
+      .font(20px, 30px, @basic-black)
     }
-  }
-
-  @media(max-width: @mobile-width-only) {
-    &--closed {
-      display: none;
-    }
-    &--opened {
-      display: initial;
+    @media (min-width: @desktop-width) {
+      .site-menu--main & {
+        .font(20px, 30px, @basic-white)
+      }
     }
   }
 }

@@ -13,10 +13,20 @@
     }
     @media(min-width: @desktop-width) {
       padding: 110px 836px 260px 190px;
-      background-image: url(../../img/index-background-image-desktop.jpg);
-      background-repeat: no-repeat;
-      background-position: top right;
-      background-size: contain;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -120px;
+        right: 0;
+        width: 720px;
+        height: 694px;
+        background-image: url(../../img/index-background-image-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: cover;
+      }
     }
   }
   &__title {
@@ -70,6 +80,12 @@
     padding: 11px 44px;
     text-align: center;
 
+    &:hover {
+      background-color: @basic-green-2;
+    }
+    &:active {
+      color: fadeout(@basic-white, 70%);
+    }
     @media (min-width: @tablet-width) {
       .font(20px, 20px);
       position: absolute;

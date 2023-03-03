@@ -139,7 +139,7 @@
     }
   }
   &__image {
-    display: block;
+    display: none;
     position: absolute;
     height: 232px;
     width: auto;
@@ -147,6 +147,9 @@
     @media (min-width: @tablet-width) {
       height: 511px;
       width: auto;
+    }
+    &--active {
+      display: block;
     }
   }
   &__range {

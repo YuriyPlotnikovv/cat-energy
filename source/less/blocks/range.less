@@ -9,6 +9,7 @@
 
     @media (min-width: @tablet-width) {
       .font(20px, 30px);
+      border-bottom: 1px dotted fadeout(@basic-black, 76%);
     }
   }
   &__toggler {
@@ -49,9 +50,69 @@
     @media (min-width: @tablet-width) {
       display: initial;
       padding: 35px 0;
+      appearance: none;
+      background-color: transparent;
     }
     @media (min-width: @desktop-width) {
       padding: 25px 0;
+    }
+
+    &::-moz-range-thumb {
+      height: 30px;
+      width: 30px;
+      padding: 0;
+      box-sizing: border-box;
+      border: 11px solid @basic-white;
+      border-radius: 50%;
+      background-color: @basic-green;
+      box-shadow:
+      0 0 0 1px @special-grey-4,
+      0 1px 3px fadeout(@basic-black, 84%);
+      cursor: pointer;  
+      
+      &:hover {
+        box-shadow: 0 0 0 1px @special-grey-4,
+        0 2px 4px fadeout(@basic-black, 81%);
+      }
+      &:active {
+        box-shadow: 0 0 0 1px @special-grey-4,
+        0 3px 5px fadeout(@basic-black, 80%);        
+      }
+    }
+    &::-moz-range-track {
+      height: 8px;
+      background-color: @special-grey-5;
+      border-radius: 6px;
+    }
+    
+    &::-webkit-slider-thumb {
+      appearance: none;
+      height: 30px;
+      width: 30px;
+      margin-top: -12px;
+      padding: 0;
+      box-sizing: border-box;
+      border: 11px solid @basic-white;
+      border-radius: 50%;
+      background-color: @basic-green;
+      box-shadow:
+      0 0 0 1px @special-grey-4
+      0 1px 3px fadeout(@basic-black, 84%);
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 0 1px @special-grey-4,
+        0 2px 4px fadeout(@basic-black, 81%);
+      }
+      &:active {
+        box-shadow: 0 0 0 1px @special-grey-4,
+        0 3px 5px fadeout(@basic-black, 80%);        
+      }
+    }
+    &::-webkit-slider-runnable-track {
+      height: 8px;
+      background-color: @special-grey-5;
+      border-radius: 6px;
     }
   }
 }
