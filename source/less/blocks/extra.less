@@ -5,6 +5,7 @@
     margin: 0;
 
     @media(min-width: @tablet-width) {
+     .font(20px, 20px, @dark-grey-2);
       margin-right: auto;
     }
     @media(min-width: @desktop-width) {
@@ -18,13 +19,18 @@
     justify-content: space-between;
 
     @media(min-width: @tablet-width) {
+      .font(16px, 20px, @dark-grey, "Arial");
       display: grid;
       grid-template-columns: 1fr max-content;
+      gap: 0 49px;
+      padding-top: 2px;
     }
   }
   &__button {
     .font(16px, 20px, @basic-white);
     background-color: @basic-green;
+    padding: 10px 0;
+    text-align: center;
 
     @media(min-width: @tablet-width) {
       grid-column: 1 / -1;

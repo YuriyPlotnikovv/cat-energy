@@ -1,6 +1,25 @@
 .data-list {
+  &__name {
+    position: relative;
+    @media(min-width: @tablet-width) {
+      &::after {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 1px;
+        background-color: @special-grey-4;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+    }    
+  }
   &__description {
     margin: 0;
     justify-self: flex-end;
+
+    @media(min-width: @tablet-width) {
+      justify-self: center;
+    }
   }
 }

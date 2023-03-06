@@ -1,27 +1,42 @@
 .offer {
-  .font(16px, 20px, @basic-white, "Arial");
-  margin: 0;
-
   &__wrapper {
   background-color: @basic-green;
   background-image: url(../../img/catalog-gift-background.jpg);
   background-repeat: no-repeat;
   background-size: 280px 290px;
+  position: relative;
 
     @media(min-width: @tablet-width) {
       background-size: cover;
-      background-position: center;
+      background-position: center 60%;
     }
   }
   &__text {
     margin: 0;
-    padding: 187px 60px 43px;
+    padding: 187px 55px 43px;
 
     @media(min-width: @tablet-width) {
       padding: 71px 124px 69px 422px;
     }
     @media(min-width: @desktop-width) {
       padding: 184px 40px 40px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 78px;
+      height: 80px;
+      position: absolute;
+      top: 58px;
+      left: calc(50% - 40px);
+      background-image: url(../../img/icon-gift.svg);
+      background-size: cover;
+      background-position: center;
+
+      @media(min-width: @tablet-width) {
+        left: 80px;
+      }
     }
   }
 }
