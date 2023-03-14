@@ -19,7 +19,7 @@
       padding: 71px 124px 69px 422px;
     }
     @media(min-width: @desktop-width) {
-      padding: 184px 40px 40px;
+      padding: 190px 35px 42px;
     }
 
     &::before {
@@ -36,6 +36,10 @@
 
       @media(min-width: @tablet-width) {
         left: 80px;
+      }
+      @media(min-width: @desktop-width) {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }

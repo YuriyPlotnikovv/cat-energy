@@ -47,7 +47,7 @@
       counter-increment: advantages;
     }
     @media(min-width: @desktop-width) {
-      padding: 145px 20px 57px 0;
+      padding: 145px 0 57px 0;
     }
     &::before {
       content: "";
@@ -77,6 +77,9 @@
       
       @media (min-width: @tablet-width) {
         content: counter(advantages);        
+      }
+      @media (min-width: @desktop-width) {
+        left: 47%;
       }
     }
     &--leaf {

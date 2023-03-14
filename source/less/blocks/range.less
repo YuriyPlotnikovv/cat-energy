@@ -6,10 +6,15 @@
     text-transform: uppercase;
     background-color: inherit;
     margin: 0 17px;
+    cursor: pointer;
 
     @media (min-width: @tablet-width) {
       .font(20px, 30px);
       border-bottom: 1px dotted fadeout(@basic-black, 76%);
+      margin: auto 22px;
+    }
+    @media (min-width: @desktop-width) {
+      margin: auto 5px;
     }
   }
   &__toggler {

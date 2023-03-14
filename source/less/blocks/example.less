@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, auto);
   }
   @media(min-width: @desktop-width) {
-    padding: 50px 110px 50px;
+    padding: 50px 110px 47px;
     grid-template-columns: 1fr 1fr;
     gap: 0 55px;
   }
@@ -41,7 +41,7 @@
     @media(min-width: @desktop-width) {
       grid-column: 1 / 2;
       margin: 0 0 70px;
-      padding: 0 130px 0 0;
+      padding: 0 150px 0 0;
     }
   }
   &__list {
@@ -98,17 +98,18 @@
       padding: 15px 10px 17px;
     }
     @media(min-width: @desktop-width) {
-      padding: 15px 10px 17px;
+      padding: 13px 10px 19px;
     }
   }
   &__spending {
     .font(14px, 20px);
     text-transform: uppercase;
-    margin: 10px 0 35px;
+    margin: 0 0 35px;
     text-align: center;
 
     @media (min-width: @tablet-width) {
-      .font(20px, 20px);
+      .font(20px, 28px);
+      margin: 6px 0 35px;
       width: 175px;
       justify-self: end;
       text-align: end;
@@ -122,13 +123,18 @@
       padding: 22px 0;
     }
   }
+  &__price {
+    @media (min-width: @desktop-width) {
+      margin-left: 60px;
+    }
+  }
   &__images {
     position: relative;
     height: 260px;
 
     @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
-      padding: 55px 0 0 0;
+      padding: 63px 0 0 0;
       height: 511px;
     }
     @media(min-width: @desktop-width) {
@@ -163,6 +169,8 @@
     @media(min-width: @desktop-width) {
       grid-column: 2 / 3;
       grid-row: 4 / 5;
+      justify-content: flex-end;
+      gap: 18px;
     }
   }
 }

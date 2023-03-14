@@ -10,6 +10,7 @@
     }
     @media(min-width: @desktop-width) {
       margin: 0;
+      padding-top: 8px;
     }
   }
   &__data {
@@ -21,9 +22,13 @@
     @media(min-width: @tablet-width) {
       .font(16px, 20px, @dark-grey, "Arial");
       display: grid;
-      grid-template-columns: 1fr max-content;
+      grid-template-columns: 1fr 45px;
       gap: 0 49px;
       padding-top: 2px;
+    }
+    @media(min-width: @desktop-width) {
+      padding: 13px 0 0;
+      gap: 0 52px;
     }
   }
   &__button {
@@ -31,12 +36,21 @@
     background-color: @basic-green;
     padding: 10px 0;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @basic-green-2;
+    }
+    &:active {
+      color: fadeout(@basic-white, 70%);
+    }
 
     @media(min-width: @tablet-width) {
       grid-column: 1 / -1;
     }
     @media(min-width: @desktop-width) {
       grid-column: 3 / 4;
+      padding: 10px 90px;
     }
   }
 }

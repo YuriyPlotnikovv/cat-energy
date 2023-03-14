@@ -27,6 +27,9 @@
       .font(20px, 22px, @basic-black-2);
       margin: 0 58px 23px;
     }
+    @media(min-width: @desktop-width) {
+      margin: 0 15px 23px;
+    }
 
     &::before {
       content: "";
@@ -70,7 +73,9 @@
     @media(min-width: @tablet-width) {
       .font(16px, 18px, @dark-grey, "Arial");
       margin: 0 41px;
-      
+    }
+    @media(min-width: @desktop-width) {
+      margin: 0;
     }
   }
   &__button {
@@ -78,5 +83,13 @@
     background-color: @basic-grey;
     padding: 10px 0;
     margin-top: auto;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @special-grey-2;
+    }
+    &:active {
+      color: fadeout(@dark-grey, 70%);
+    }
   }
 }

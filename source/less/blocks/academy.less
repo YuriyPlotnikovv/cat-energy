@@ -1,0 +1,18 @@
+.academy {
+  &__text {
+    .page-footer__academy:active & {
+      color: fadeout(@dark-grey, 70%);
+    }
+  }
+  &__logo {
+    fill: @special-grey-3;
+
+    .page-footer__academy:hover & {
+      fill: @basic-green;
+    }
+    .page-footer__academy:active & {
+      fill: fadeout(@basic-green, 70%);
+    }
+  
+  }
+}

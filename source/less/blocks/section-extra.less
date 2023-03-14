@@ -1,15 +1,15 @@
 .section-extra {
-  padding: 25px 20px 20px;
+  padding: 25px 20px 35px;
   box-shadow: inset 0 1px @special-grey;
 
   @media(min-width: @tablet-width) {
-    padding: 70px 30px 60px;
+    padding: 70px 30px 75px;
     box-shadow: none;
   }
   @media(min-width: @desktop-width) {
-    padding: 25px 110px;
+    padding: 77px 110px 85px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 18fr 5fr;
     gap: 80px;
   }
   &__title {
@@ -18,35 +18,55 @@
     position: relative;
     background-color: @basic-white;
     
-    @media(min-width: @tablet-width) {
-      .font(36px, 36px);
-      padding-left: 37px;
-      margin: 0 0 80px;
-    }
-    @media(min-width: @desktop-width) {
-      grid-column: 1 / -1;
-    }
-    
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: -30px;
-      top: 22px;
-      width: 4%;
-      height: 2px;
-      background-color: @basic-green;
-    }
     &::after {
       content: "";
       display: block;
       position: absolute;
-      right: -30px;
-      top: 22px;
-      width: 46%;
+      right: -20px;
+      top: 16px;
+      width: 19%;
       height: 2px;
       background-color: @basic-green;
     }
+    
+    @media(min-width: @tablet-width) {
+      .font(36px, 36px);
+      padding-left: 37px;
+      margin: 0 0 80px;
+      
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -30px;
+        top: 22px;
+        width: 4%;
+        height: 2px;
+        background-color: @basic-green;
+      }
+      &::after {
+        right: -30px;
+        top: 22px;
+        width: 46%;
+      }
+    }
+    @media(min-width: @desktop-width) {
+      grid-column: 1 / -1;
+      padding: 0;
+      margin: 0;
+
+      &::before {
+        left: -110px;
+        top: 25px;
+        width: 6%;
+      }
+      &::after {
+        right: -110px;
+        top: 24px;
+        width: 78%;
+      }
+    }
+    
   }
   &__list {
     margin: 0;
@@ -59,6 +79,10 @@
     @media(min-width: @tablet-width) {
       margin-bottom: 69px;
       box-shadow: inset 0 0 0 1px @special-grey;
+    }
+    @media(min-width: @desktop-width) {
+      box-shadow: none;
+      margin: 0;
     }
   }
   &__item {
@@ -84,18 +108,21 @@
       box-shadow: inset 0 -1px 0 0 @special-grey;
     }
     @media(min-width: @desktop-width) {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 38px;
+      grid-template-columns: 1fr 1fr min-content;
+      gap: 40px;
+      padding: 19px 0 13px;
     }
 
   }
   &__offer {
     .font(16px, 20px, @basic-white, "Arial");
-    margin: 0 0 15px;
     text-align: center;
 
     @media(min-width: @tablet-width) {
       text-align: start;
+    }
+    @media(min-width: @desktop-width) {
+      text-align: center;
     }
   }
 }

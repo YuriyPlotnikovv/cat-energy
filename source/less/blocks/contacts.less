@@ -47,10 +47,17 @@
       .font(16px, 20px, @dark-grey, "Arial");
       width: 160px;
       text-align: end;
+
     }
     @media(min-width: @desktop-width) {
       text-align: start;
       margin-top: -5px;
+    }
+  }
+  &__city {
+    @media(min-width: @tablet-width) {
+      display: block;
+      margin-top: 20px;
     }
   }
   &__map {

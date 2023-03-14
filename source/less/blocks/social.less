@@ -1,11 +1,44 @@
 .social {
   &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
   }
   &__link {
+    width: 44px;
+  }
+  &__icon {
     display: block;
+    margin: auto;
+
+    &--vk {
+      fill: @special-grey-3;
+
+      &:hover {
+        fill: @basic-green;
+      }
+      &:active {
+        fill: fadeout(@basic-green, 70%);
+      }
+    }
+    &--instagram {
+      fill: @special-grey-3;
+
+      &:hover {
+        fill: @basic-green;
+      }
+      &:active {
+        fill: fadeout(@basic-green, 70%);
+      }
+    }
+    &--facebook {
+      stroke: @special-grey-3;
+
+      &:hover {
+        stroke: @basic-green;
+      }
+      &:active {
+        stroke: fadeout(@basic-green, 70%);
+      }
+    }
   }
 }

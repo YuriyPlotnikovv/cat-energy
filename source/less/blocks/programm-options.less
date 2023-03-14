@@ -129,7 +129,7 @@
       margin: 0 0 52px;
     }
     @media(min-width: @desktop-width) {
-      margin: 0 0 25px;
+      margin: 0 0 27px;
     }
 
   }
@@ -138,6 +138,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding-right: 60px;
+    position: relative;
 
     @media(min-width: @tablet-width) {
       .font(20px, 30px);
@@ -146,8 +147,9 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: 24px;
-      left: 121px;
+      bottom: 50%;
+      transform: translateY(50%);
+      left: 100px;
       width: 24px;
       height: 12px;
       background-image: url(../../img/icon-arrow.svg);
@@ -156,8 +158,10 @@
       background-position: 100% 50%;
       
       @media (min-width: @tablet-width) {
-        bottom: 66px;
-        left: 181px;
+        left: 130px;
+      }
+      @media(min-width: @desktop-width) {
+        left: 130px;
       }
     }
     &:hover {
