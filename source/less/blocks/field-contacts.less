@@ -1,0 +1,99 @@
+.field-contacts {
+  &__list {
+    @media(min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+    }
+  }
+
+  &__label {
+    gap: 11px;
+    margin-bottom: 14px;
+
+    @media(min-width: @tablet-width) {
+      gap: 17px;
+      margin-bottom: 20px;
+    }
+    @media(min-width: @desktop-width) {
+      gap: 20px;
+    }
+  }
+  &__title {
+    display: block;
+    margin: 27px 0 35px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -20px;
+      top: 42px;
+      width: 36%;
+      height: 2px;
+      background-color: @basic-green;
+    }
+
+    @media(min-width: @tablet-width) {
+      margin: 75px 0 75px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -70px;
+        top: 96px;
+        width: 5%;
+        height: 2px;
+        background-color: @basic-green;
+      }
+      &::after {
+        right: -70px;
+        top: 96px;
+        width: 23%;
+      }
+    }
+    @media(min-width: @desktop-width) {
+      margin: 52px 0 75px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -110px;
+        top: 73px;
+        width: 6%;
+        height: 2px;
+        background-color: @basic-green;
+      }
+      &::after {
+        right: -110px;
+        top: 72px;
+        width: 64%;
+      }
+    } 
+  }
+  &__input {
+    padding: 11px 40px 14px 12px;
+
+    @media(min-width: @tablet-width) {
+      padding: 10px 40px 10px 17px;
+    } 
+  }
+  &__icon {
+    display: block;
+    position: absolute;
+    right: 15px;
+
+    @media (min-width: @desktop-width) {
+      right: 20px;
+    }
+
+    &--mail {
+      stroke: @dark-grey-2;
+    }
+    &--phone {
+      fill: @dark-grey-2;
+    }
+  }
+}

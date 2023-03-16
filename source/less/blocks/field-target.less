@@ -1,0 +1,109 @@
+.field-target {
+  padding: 22px 0 8px;
+
+  @media(max-width: @mobile-width-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      bottom: 0;
+      display: block; 
+      width: 120%;
+      height: 1px;
+      background-color: @basic-grey-2;
+    }
+  }
+  @media(min-width: @tablet-width) {
+    padding: 25px 30px 15px;
+    outline: 1px solid @basic-grey-4;
+  }
+  @media(min-width: @desktop-width) {
+    padding: 25px 28px 10px;
+    margin: 45px 0 20px;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 11px;
+
+    @media(min-width: @tablet-width) {
+      gap: 20px;
+      grid-template-columns: 40px 1fr;
+    } 
+
+    &::before {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      content: "";
+      height: 30px;
+      border: 1px solid @special-grey-4;
+      border-radius: 50%;
+
+      @media(min-width: @tablet-width) {
+        height: 40px;
+      } 
+    }
+    &::after {
+      .field-target__input:checked + & {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        content: "";
+        height: 30px;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        background-color: @basic-green;
+        border: 8px solid transparent;
+        border-radius: 50%;
+
+        @media(min-width: @tablet-width) {
+          height: 40px;
+          border-width: 11px;
+        } 
+      }
+    }
+
+    @media(min-width: @tablet-width) {
+      grid-template-columns: 40px 1fr;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    opacity: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    &:hover {
+      & + .field-target__text {
+        &::before {
+          border-color: @special-grey-6;
+        }
+      }
+    }
+    &:focus {
+      & + .field-target__text {
+        &::before {
+          outline: 2px solid @dark-grey;
+          outline-offset: -2px;
+        }
+      }
+    }
+    &:disabled {
+      & + .field-target__text {
+        &::before, &::after {
+          opacity: 30%;
+        }
+      }
+    }      
+
+    @media(min-width: @tablet-width) {
+      height: 40px;
+    }
+  }
+}

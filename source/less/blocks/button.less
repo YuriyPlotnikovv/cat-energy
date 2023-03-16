@@ -1,3 +1,14 @@
 .button {
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+
+  &:hover {
+    background-color: @basic-green-2;
+  }
+  &:active {
+    color: fadeout(@basic-white, 70%);
+  }
 }
