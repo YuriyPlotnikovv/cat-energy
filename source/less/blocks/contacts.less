@@ -15,7 +15,7 @@
     justify-content: space-between;
 
     @media(min-width: @tablet-width) {
-      padding: 59px 70px 63px;
+      padding: 62px 70px 59px;
     }
     @media(min-width: @desktop-width) {
       background-color: @basic-white;
@@ -47,11 +47,12 @@
       .font(16px, 20px, @dark-grey, "Arial");
       width: 160px;
       text-align: end;
+      margin-top: -5px;
 
     }
     @media(min-width: @desktop-width) {
       text-align: start;
-      margin-top: -5px;
+      margin-top: -3px;
     }
   }
   &__city {
@@ -62,17 +63,9 @@
   }
   &__map {
     height: 362px;
-    background-image: url(../../img/map-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 
     @media(min-width: @tablet-width) {
       height: 400px;
-      background-image: url(../../img/map-tablet.png);
-    }
-    @media(min-width: @desktop-width) {
-      background-image: url(../../img/map-desktop.png);
     }
   }
 }

@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, auto);
   }
   @media(min-width: @desktop-width) {
-    padding: 50px 110px 47px;
+    padding: 53px 110px 47px;
     grid-template-columns: 1fr 1fr;
     gap: 0 55px;
   }
@@ -21,7 +21,7 @@
 
     @media (min-width: @tablet-width) {
       .font(60px, 60px);
-      margin: 0 0 65px;
+      margin: 0 0 63px;
       grid-column: 1 / 4;
     }
     @media(min-width: @desktop-width) {
@@ -146,13 +146,13 @@
   }
   &__image {
     display: none;
-    position: absolute;
     height: 232px;
     width: auto;
 
     @media (min-width: @tablet-width) {
       height: 511px;
       width: auto;
+      margin: 0 auto;
     }
     &--active {
       display: block;
