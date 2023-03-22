@@ -698,7 +698,7 @@
   left: 22px;
   width: 50px;
   height: 53px;
-  background-image: url(../../img/icon-cat-skinny.svg);
+  background-image: url(../../img/icons/icon-cat-skinny.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -727,7 +727,7 @@
   left: 13px;
   width: 67px;
   height: 50px;
-  background-image: url(../../img/icon-cat-gain.svg);
+  background-image: url(../../img/icons/icon-cat-gain.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -839,7 +839,7 @@
   left: 100px;
   width: 24px;
   height: 12px;
-  background-image: url(../../img/icon-arrow.svg);
+  background-image: url(../../img/icons/icon-arrow.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% 50%;
@@ -973,16 +973,16 @@
   }
 }
 .advantages__item--leaf::before {
-  background-image: url(../../img/icon-leaf.svg);
+  background-image: url(../../img/icons/icon-leaf.svg);
 }
 .advantages__item--water::before {
-  background-image: url(../../img/icon-water.svg);
+  background-image: url(../../img/icons/icon-water.svg);
 }
 .advantages__item--food::before {
-  background-image: url(../../img/icon-food.svg);
+  background-image: url(../../img/icons/icon-food.svg);
 }
 .advantages__item--time::before {
-  background-image: url(../../img/icon-time.svg);
+  background-image: url(../../img/icons/icon-time.svg);
 }
 .advantages__text {
   font-family: "Arial";
@@ -1945,7 +1945,7 @@
   height: 30px;
   box-sizing: border-box;
   background-clip: padding-box;
-  background-image: url(../../img/checkmark-icon.svg);
+  background-image: url(../../img/icons/icon-checkmark.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2558,7 +2558,7 @@
   position: absolute;
   top: 58px;
   left: calc(50% - 40px);
-  background-image: url(../../img/icon-gift.svg);
+  background-image: url(../../img/icons/icon-gift.svg);
   background-size: cover;
   background-position: center;
 }
