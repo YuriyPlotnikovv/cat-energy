@@ -517,12 +517,17 @@
   }
 }
 .select-programm__wrapper {
-  background-image: url(../../img/index-background-image.jpg);
+  background-image: url(../../img/index-background-image-mobile.png);
   background-color: #68b738;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   padding: 27px 20px 135px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .select-programm__wrapper {
+    background-image: url(../../img/index-background-image-mobile@2x.png);
+  }
 }
 @media (min-width: 768px) {
   .select-programm__wrapper {
@@ -542,10 +547,15 @@
     right: 0;
     width: 720px;
     height: 694px;
-    background-image: url(../../img/index-background-image-desktop.jpg);
+    background-image: url(../../img/index-background-image-desktop.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .select-programm__wrapper::after {
+    background-image: url(../../img/index-background-image-desktop@2x.png);
   }
 }
 .select-programm__title {
@@ -973,16 +983,36 @@
   }
 }
 .advantages__item--leaf::before {
-  background-image: url(../../img/icons/icon-leaf.svg);
+  background-image: url(../../img/icons/icon-leaf-mobile.svg);
+}
+@media (min-width: 768px) {
+  .advantages__item--leaf::before {
+    background-image: url(../../img/icons/icon-leaf-desktop.svg);
+  }
 }
 .advantages__item--water::before {
-  background-image: url(../../img/icons/icon-water.svg);
+  background-image: url(../../img/icons/icon-water-mobile.svg);
+}
+@media (min-width: 768px) {
+  .advantages__item--water::before {
+    background-image: url(../../img/icons/icon-water-desktop.svg);
+  }
 }
 .advantages__item--food::before {
-  background-image: url(../../img/icons/icon-food.svg);
+  background-image: url(../../img/icons/icon-food-mobile.svg);
+}
+@media (min-width: 768px) {
+  .advantages__item--food::before {
+    background-image: url(../../img/icons/icon-food-desktop.svg);
+  }
 }
 .advantages__item--time::before {
-  background-image: url(../../img/icons/icon-time.svg);
+  background-image: url(../../img/icons/icon-time-mobile.svg);
+}
+@media (min-width: 768px) {
+  .advantages__item--time::before {
+    background-image: url(../../img/icons/icon-time-desktop.svg);
+  }
 }
 .advantages__text {
   font-family: "Arial";
@@ -2525,15 +2555,24 @@
 }
 .offer__wrapper {
   background-color: #68b738;
-  background-image: url(../../img/catalog-gift-background.jpg);
+  background-image: -webkit-image-set(url("../../img/catalog-gift-background-mobile.png") 1x, url("../../img/catalog-gift-background-mobile@2x.png") 2x);
+  background-image: image-set(url("../../img/catalog-gift-background-mobile.png") 1x, url("../../img/catalog-gift-background-mobile@2x.png") 2x);
   background-repeat: no-repeat;
   background-size: 280px 290px;
   position: relative;
 }
 @media (min-width: 768px) {
   .offer__wrapper {
+    background-image: -webkit-image-set(url("../../img/catalog-gift-background-tablet.png") 1x, url("../../img/catalog-gift-background-tablet@2x.png") 2x);
+    background-image: image-set(url("../../img/catalog-gift-background-tablet.png") 1x, url("../../img/catalog-gift-background-tablet@2x.png") 2x);
     background-size: cover;
     background-position: center 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .offer__wrapper {
+    background-image: -webkit-image-set(url("../../img/catalog-gift-background-desktop.png") 1x, url("../../img/catalog-gift-background-desktop@2x.png") 2x);
+    background-image: image-set(url("../../img/catalog-gift-background-desktop.png") 1x, url("../../img/catalog-gift-background-desktop@2x.png") 2x);
   }
 }
 .offer__text {
