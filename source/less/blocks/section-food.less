@@ -15,7 +15,7 @@
     @media(min-width: @tablet-width) {
       display: flex;
       flex-wrap: wrap;
-      gap: 60px;
+      gap: 62px 60px;
       padding-top: 82px;
     }
     @media(min-width: @desktop-width) {
@@ -35,17 +35,16 @@
 
     @media(min-width: @tablet-width) {
       grid-template-columns: 1fr;
-      grid-template-rows: 100px min-content min-content min-content;
+      grid-template-rows: 200px auto;
       gap: 20px;
-      padding: 39px 36px;
+      padding: 8px 36px 37px;
       width: 324px;
       box-shadow: none;
-      background-color: @basic-grey;
-      margin-top: 82px;
+      background-image: linear-gradient(to bottom, @basic-white 80px, @basic-grey 80px);
     }
     @media(min-width: @desktop-width) {
       width: 245px;
-      padding: 39px 36px 39px 40px;
+      padding: 0 36px 39px 40px;
     }
   }
 }
