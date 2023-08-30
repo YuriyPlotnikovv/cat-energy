@@ -7,4 +7,6 @@
 * препроцессор Less
 * сборка через Gulp
 ---
+Деплой проекта: https://precious-chimera-27ad7c.netlify.app
+---
 Второй учебный проект в рамках курса Frontend-разработчик от HTML Academy
