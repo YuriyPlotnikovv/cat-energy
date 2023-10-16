@@ -1,57 +1,64 @@
 .questionary {
   padding: 20px 20px 32px;
-  
-  @media(min-width: @tablet-width) {
+
+  @media (min-width: @tablet-width) {
     padding: 50px 70px 73px;
   }
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     padding: 20px 110px 83px;
-  }  
+  }
 
   &__main-wrapper {
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
     }
   }
   &__field {
-    margin: 0;
+    position: relative;
+
     display: flex;
     flex-direction: column;
+    margin: 0;
     padding: 0;
-    border: none;
-    position: relative;
     box-sizing: border-box;
+
+    border: none;
   }
   &__label {
+    position: relative;
+
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 14px;
     align-items: center;
-    position: relative;
+
     cursor: pointer;
   }
   &__title {
     .font(24px, 26px);
 
-    @media(min-width: @tablet-width) {
-      .font(36px, 36px)
-    } 
+    @media (min-width: @tablet-width) {
+      .font(36px, 36px);
+    }
   }
   &__text {
     .font(16px, 18px, @dark-grey);
     text-transform: uppercase;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       .font(20px, 30px);
     }
   }
   &__input {
+    min-width: 100px;
+
     .font(16px, 18px, @dark-grey);
     text-transform: uppercase;
-    min-width: 100px;
+
     border: 1px solid @basic-grey-6;
+
     cursor: pointer;
 
     &:hover {
@@ -83,7 +90,7 @@
       }
     }
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       .font(20px, 30px);
     }
   }
@@ -91,39 +98,45 @@
     display: flex;
     flex-direction: column;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       gap: 80px;
     }
   }
   &__button {
-    .font(16px, 20px, @basic-white);
-    background-color: @basic-green;
     margin-bottom: 20px;
     padding: 11px 0;
+
+    .font(16px, 20px, @basic-white);
+
+    background-color: @basic-green;
     border: none;
+
     cursor: pointer;
 
-    @media(min-width: @tablet-width) {
-      .font(20px, 20px, @basic-white);
-      padding: 17px 20px 15px;
+    @media (min-width: @tablet-width) {
       grid-column: 1 / 2;
       margin: 0;
+      padding: 17px 20px 15px;
+
+      .font(20px, 20px, @basic-white);
     }
   }
   &__footnote {
-    .font(14px, 16px, @basic-black, "Arial");
     margin: 0 auto;
 
-    @media(min-width: @tablet-width) {
-      .font(16px, 16px, @basic-black, "Arial");
+    .font(14px, 16px, @basic-black, "Arial");
+
+    @media (min-width: @tablet-width) {
       grid-column: 2 / 3;
       align-self: center;
       margin: 0;
+
+      .font(16px, 16px, @basic-black, "Arial");
     }
   }
 }

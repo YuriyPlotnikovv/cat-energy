@@ -6,7 +6,7 @@
     @media (min-width: @tablet-width) {
       flex-direction: row;
     }
-    @media(max-width: @mobile-width-only) {
+    @media (max-width: @mobile-width-only) {
       &--closed {
         .page-header__menu {
           display: none;
@@ -17,29 +17,36 @@
           display: initial;
         }
         .page-header__toggle::before {
-          content: "";
-          display: block;
           position: absolute;
+          transform: rotate(45deg);
+
+          display: block;
           width: 25px;
           height: 1.5px;
+
           background-color: @basic-black;
           box-shadow: none;
-          transform: rotate(45deg);
+
+          content: "";
         }
         .page-header__toggle::after {
-          content: "";
-          display: block;
           position: absolute;
+          transform: rotate(-45deg);
+
+          display: block;
           width: 25px;
           height: 1.5px;
+
           background-color: @basic-black;
-          transform: rotate(-45deg);
+
+          content: "";
         }
       }
       &--nojs {
         .site-menu {
-          display: block;
           position: static;
+
+          display: block;
         }
         .page-header__toggle {
           display: none;
@@ -48,33 +55,37 @@
     }
   }
   &__menu {
-    margin: 0;
-    padding: 0;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 2;
+
     display: flex;
     flex-direction: column;
-    background-color: @basic-white;
-    position: absolute;
     width: 100%;
-    left: 0;
-    top: 65px;
-    z-index: 2;
+    margin: 0;
+    padding: 0;
+
+    background-color: @basic-white;
 
     @media (min-width: @tablet-width) {
       position: initial;
+
       flex-direction: row;
       gap: 36px;
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       background-color: transparent;
     }
   }
   &__logo {
-    text-decoration: none;
     display: flex;
+    align-items: center;
     gap: 57px;
     width: max-content;
     margin-bottom: 14px;
-    align-items: center;
+
+    text-decoration: none;
 
     &:hover {
       opacity: 0.8;
@@ -90,20 +101,22 @@
     @media (min-width: @desktop-width) {
       margin-top: 0;
     }
-
   }
   &__toggle {
     position: absolute;
     top: 24px;
     right: 20px;
     z-index: 2;
+
+    display: block;
     width: 24px;
     height: 16px;
-    display: block;
-    border: none;
-    cursor: pointer;
-    background-color: @basic-white;
     padding: 0;
+
+    background-color: @basic-white;
+    border: none;
+
+    cursor: pointer;
 
     &:hover {
       opacity: 0.6;
@@ -112,14 +125,14 @@
       opacity: 0.3;
     }
     &::before {
-      content: "";
       display: block;
       width: 24px;
       height: 1.5px;
+
       background-color: @basic-black;
-      box-shadow: 
-      0 -8px 0 0,
-      0 8px 0 0;
+      box-shadow: 0 -8px 0 0, 0 8px 0 0;
+
+      content: "";
     }
     @media (min-width: @tablet-width) {
       display: none;

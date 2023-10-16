@@ -1,41 +1,48 @@
 .extra {
   &__title {
-    .font(16px, 16px, @dark-grey-2);
-    text-transform: uppercase;
     margin: 0;
 
-    @media(min-width: @tablet-width) {
-     .font(20px, 20px, @dark-grey-2);
+    .font(16px, 16px, @dark-grey-2);
+    text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
       margin-right: auto;
+
+      .font(20px, 20px, @dark-grey-2);
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       margin: 0;
       padding-top: 8px;
     }
   }
   &__data {
-    .font(14px, 14px, @dark-grey, "Arial");
-    margin: 0;
     display: flex;
     justify-content: space-between;
+    margin: 0;
 
-    @media(min-width: @tablet-width) {
-      .font(16px, 20px, @dark-grey, "Arial");
+    .font(14px, 14px, @dark-grey, "Arial");
+
+    @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 45px;
       gap: 0 49px;
       padding-top: 2px;
+
+      .font(16px, 20px, @dark-grey, "Arial");
     }
-    @media(min-width: @desktop-width) {
-      padding: 13px 0 0;
+    @media (min-width: @desktop-width) {
       gap: 0 52px;
+      padding: 13px 0 0;
     }
   }
   &__button {
-    .font(16px, 20px, @basic-white);
-    background-color: @basic-green;
     padding: 10px 0;
+
+    .font(16px, 20px, @basic-white);
     text-align: center;
+
+    background-color: @basic-green;
+
     cursor: pointer;
 
     &:hover {
@@ -45,10 +52,10 @@
       color: fadeout(@basic-white, 70%);
     }
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       grid-column: 1 / -1;
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       grid-column: 3 / 4;
       padding: 10px 90px;
     }

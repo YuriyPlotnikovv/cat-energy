@@ -1,64 +1,73 @@
 .select-programm {
   &__wrapper {
-    background-image: url(../img/index-background-image-mobile.png);
+    padding: 27px 20px 135px;
+
     background-color: @basic-green;
+    background-image: url(../img/index-background-image-mobile.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    padding: 27px 20px 135px;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url(../img/index-background-image-mobile@2x.png);
     }
 
     @media (min-width: @tablet-width) {
-      background: none;
       padding: 44px 237px 0 117px;
+
+      background: none;
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       padding: 90px 836px 265px 190px;
 
       &::after {
-        content: "";
-        display: block;
         position: absolute;
         top: -135px;
         right: 0;
+
+        display: block;
         width: 720px;
         height: 694px;
+
         background-image: url(../img/index-background-image-desktop.png);
         background-repeat: no-repeat;
         background-position: top right;
         background-size: cover;
 
-        @media(min-resolution: 2dppx) {
+        content: "";
+
+        @media (min-resolution: 2dppx) {
           background-image: url(../img/index-background-image-desktop@2x.png);
         }
       }
     }
   }
   &__title {
-    .font(36px, 36px, @basic-white);
-    text-align: center;
     margin: 0 0 25px;
+    text-align: center;
+
+    .font(36px, 36px, @basic-white);
 
     @media (min-width: @tablet-width) {
-      .font(60px, 60px, @basic-black);
-      margin: 0 0 41px;
       width: 414px;
+      margin: 0 0 41px;
       text-align: start;
+
+      .font(60px, 60px, @basic-black);
     }
   }
   &__text {
+    margin: 0 0 29px;
+    text-align: center;
+
     .font(14px, 14px, @basic-white);
     text-transform: uppercase;
-    text-align: center;
-    margin: 0 0 29px;
 
     @media (min-width: @tablet-width) {
-      .font(20px, 20px, @basic-black);
-      text-align: start;
       margin: 0 0 20px;
+      text-align: start;
+
+      .font(20px, 20px, @basic-black);
     }
   }
   &__image {
@@ -72,29 +81,34 @@
       height: 609px;
       margin: 0 auto;
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       position: absolute;
       top: 7px;
       left: 558px;
+
       width: 552px;
       height: 499px;
     }
   }
   &__button {
-    .font(14px, 18px, @basic-white);
-    background-color: @basic-green;
     margin: 0 20px;
     padding: 11px 44px;
 
+    .font(14px, 18px, @basic-white);
+
+    background-color: @basic-green;
+
     @media (min-width: @tablet-width) {
-      .font(20px, 20px, @basic-white);
       position: absolute;
       top: 273px;
       left: 120px;
-      padding: 17px 26px;
+
       margin: 0;
+      padding: 17px 26px;
+
+      .font(20px, 20px, @basic-white);
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       top: 324px;
       left: 190px;
     }

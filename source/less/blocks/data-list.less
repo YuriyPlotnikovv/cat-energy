@@ -1,29 +1,33 @@
 .data-list {
   &__name {
     position: relative;
-    @media(min-width: @tablet-width) {
+
+    @media (min-width: @tablet-width) {
       &::after {
-        content: "";
-        display: block;
-        width: 250px;
-        height: 1px;
-        background-color: @special-grey-4;
         position: absolute;
         left: 0;
         bottom: -9px;
+
+        display: block;
+        width: 250px;
+        height: 1px;
+
+        background-color: @special-grey-4;
+
+        content: "";
       }
     }
-    @media(min-width: @desktop-width) {
+    @media (min-width: @desktop-width) {
       &::after {
         width: 169px;
       }
-    } 
+    }
   }
   &__description {
-    margin: 0;
     justify-self: flex-end;
+    margin: 0;
 
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       justify-self: center;
     }
   }
