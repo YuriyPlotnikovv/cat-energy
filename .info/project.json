@@ -9,6 +9,16 @@
   "deploy": "https://cat-energy-training.netlify.app/",
   "features": [
     {
+      "name-ru": "Дата разработки",
+      "name-en": "Development date",
+      "description-ru": [
+        "Май 2023"
+      ],
+      "description-en": [
+        "May 2023"
+      ]
+    },
+    {
       "name-ru": "Страницы",
       "name-en": "Pages",
       "description-ru": [
@@ -51,6 +61,23 @@
         "Shopping cart",
         "Getting the product range from the server"
       ]
+    }
+  ],
+  "technologies": [
+    {
+      "name": "HTML",
+      "icon": "icon-html",
+      "link": "https://html.spec.whatwg.org/multipage/"
+    },
+    {
+      "name": "Less",
+      "icon": "icon-less",
+      "link": "https://lesscss.org/"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "icon-js",
+      "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
     }
   ]
 }
