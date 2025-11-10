@@ -1,83 +1,61 @@
 {
-  "id": 1,
-  "title-ru": "Cat Energy",
-  "title-en": "Cat Energy",
-  "textFirst-ru": "Проект с препроцессором Less",
-  "textFirst-en": "Project with Less preprocessor",
-  "textSecond-ru": "Второй учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение работы с препроцессорами, и реализацию адаптивности сайта для разных устройств.",
-  "textSecond-en": "The second training project was developed as part of the Frontend Developer course from the HTML Academy. A project to study how to work with preprocessors, and implement site adaptability for different devices.",
-  "deploy": "https://cat-energy-training.netlify.app/",
-  "features": [
-    {
-      "name-ru": "Дата разработки",
-      "name-en": "Development date",
-      "description-ru": [
-        "Май 2023"
-      ],
-      "description-en": [
-        "May 2023"
-      ]
-    },
-    {
-      "name-ru": "Страницы",
-      "name-en": "Pages",
-      "description-ru": [
-        "Главная",
-        "Каталог",
-        "Подбор программы"
-      ],
-      "description-en": [
-        "Main",
-        "Catalog",
-        "Program Selection"
-      ]
-    },
-    {
-      "name-ru": "Функциональность",
-      "name-en": "Functionality",
-      "description-ru": [
-        "Адаптив под телефон, планшет и десктоп",
-        "Подключены интерактивные карты от Яндекса",
-        "Отправка формы заявки на подбор программы",
-        "Сборка и оптимизация через Gulp"
-      ],
-      "description-en": [
-        "Responsive design for phone, tablet, and desktop",
-        "Yandex interactive maps connected",
-        "Program selection form submission",
-        "Build and optimization via Gulp"
-      ]
-    },
-    {
-      "name-ru": "Не реализовано",
-      "name-en": "Not Implemented",
-      "description-ru": [
-        "Слайдер на главной странице",
-        "Корзина",
-        "Получение ассортимента продукции с сервера"
-      ],
-      "description-en": [
-        "Slider on the main page",
-        "Shopping cart",
-        "Getting the product range from the server"
-      ]
-    }
-  ],
+  "date": "05.2023",
+  "complexity": "1",
+  "category": "training",
+  "deploy": "https:\/\/cat-energy-training.netlify.app\/",
+  "title": {
+    "ru": "Cat Energy",
+    "en": "Cat Energy"
+  },
+  "textFirst": {
+    "ru": "Проект с препроцессором Less",
+    "en": "Project with Less preprocessor"
+  },
+  "textSecond": {
+    "ru": "Второй учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение работы с препроцессорами, и реализацию адаптивности сайта для разных устройств.",
+    "en": "The second training project was developed as part of the Frontend Developer course from the HTML Academy. A project to study how to work with preprocessors, and implement site adaptability for different devices."
+  },
+  "functionality": {
+    "ru": [
+      "Адаптив под телефон, планшет и десктоп",
+      "Подключены интерактивные карты от Яндекса",
+      "Отправка формы заявки на подбор программы",
+      "Сборка и оптимизация через Gulp"
+    ],
+    "en": [
+      "Responsive design for phone, tablet, and desktop",
+      "Yandex interactive maps connected",
+      "Program selection form submission",
+      "Build and optimization via Gulp"
+    ]
+  },
   "technologies": [
-    {
-      "name": "HTML",
-      "icon": "icon-html",
-      "link": "https://html.spec.whatwg.org/multipage/"
-    },
-    {
-      "name": "Less",
-      "icon": "icon-less",
-      "link": "https://lesscss.org/"
-    },
-    {
-      "name": "JavaScript",
-      "icon": "icon-js",
-      "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
-    }
-  ]
+    "html",
+    "less",
+    "javascript"
+  ],
+  "pages": {
+    "ru": [
+      "Главная",
+      "Каталог",
+      "Подбор программы"
+    ],
+    "en": [
+      "Main",
+      "Catalog",
+      "Program Selection"
+    ]
+  },
+  "notImplemented": {
+    "ru": [
+      "Слайдер на главной странице",
+      "Корзина",
+      "Получение ассортимента продукции с сервера"
+    ],
+    "en": [
+      "Slider on the main page",
+      "Shopping cart",
+      "Getting the product range from the server"
+    ]
+  }
 }
