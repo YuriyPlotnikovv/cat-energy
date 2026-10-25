@@ -7,6 +7,6 @@
 * препроцессор Less
 * сборка через Gulp
 ---
-Деплой проекта: https://cat-energy-training.netlify.app/
+Деплой проекта: https://cat-energy-training.yp-projects.ru/
 ---
 Второй учебный проект в рамках курса Frontend-разработчик от HTML Academy
